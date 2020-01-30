@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tableau de course</title>
+		<body>
+			<h1> Historique des courses </h1>
+			<ul>
+				<% for (var i = 0 ; i < course_dispo.length ; i++){ %>
+		  		<li> <%= course_dispo[i].id_course | course_dispo[i].adresse_depart | course_dispo[i].adresse_arrivé | course_dispo[i].date_debut_course | course_dispo[i].date_fin_course  %> </li>
+		  	<% } %>
+			</ul>
+			<br>
+			<a href='/profil_chauffeur'>page precedente </a>
+		</body>
+	</head>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tableau de course</title>
+		<body>
+
+			<h1> Gerez vos courses  </h1>
+			<form action= "/action_chauffeur" method = "post">
+ 			<% if( libre == true){ %>
+					<% if(course_dispo.length > 0){ %>
+						<% for(var i = 0 ; i < course_dispo.length ; i++){ %>
+		  					<input type="radio" name="course_begin" value = <%= course_dispo[i].id_course %> > <%= course_dispo[i].date_debut_course || course_dispo[i].adresse_depart || course_dispo[i].adresse_arrivé %> <br><br>
+		  			<% } %>
+						<input type="submit" value="Confirmer">
+				  <% } else{ %>
+							<p> Vous n'avez aucune course pour le moment </p>
+				  <% } %>
+			<% }else{ %>
+						Avez vous fini votre course en cours ? : <br>
+				  	<input type="radio" name="course_end" value = "Oui"> Oui <br>
+				  	<input type="submit" placeholder="Confirmer"></button>
+			 <% } %>
+
+				<br><br>
+			</form>
+			<a href='/profil_chauffeur'>page precedente </a>
+		</body>
+	</head>

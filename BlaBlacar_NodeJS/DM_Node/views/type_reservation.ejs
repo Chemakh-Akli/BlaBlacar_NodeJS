@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Type de reservation </title>
+	</head>
+
+	<body>
+
+		<h1> Choissisez-votre statut :D </h1>
+
+		<form action= "/reserver" method = "post">
+			Souhaitez-vous une reservation immediate ou une pre-reservation:<br>
+			<input type="radio" name="type" value = "immediate"> reservation immediate <br>
+			<input type="radio" name="type" value = "reservation"> pré-reservation <br><br>
+		  Lieu de depart:<br>
+		  <input type="text" name="adresse_depart" placeholder = "Depart"><br>
+		  Destination:<br>
+		  <input type="text" name="adresse_arrivé" placeholder = "Destination"><br>
+		  Date de depart:<br>
+		  <input type="date" name="date_debut_course" placeholder = "Date de depart"><br>
+		  pseudo : <br>
+			<select name="categorie">
+				<option value = ex > Ex</option>
+				<option value = super > Super</option>
+				<option value = ultra > Ultra</option>
+			</select> <br>
+		  <input type="submit" value="Reserver">
+		</form>
+		<br>
+		<a href='/profil_client'>page precedente </a>
+
+	</body>
+	</html>

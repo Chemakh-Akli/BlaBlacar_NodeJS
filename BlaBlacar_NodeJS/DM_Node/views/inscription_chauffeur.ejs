@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inscription</title>
+	</head>
+
+
+	<body>
+
+		<h1> Inscrivez-vous :D </h1>
+
+		<form action= "/new_chauffeur" method = "post">
+		  nom:<br>
+		  <input type="text" name="nom" placeholder = "Votre nom"><br>
+		  prenom:<br>
+		  <input type="text" name="prenom" placeholder = "Votre prenom"><br>
+		  email:<br>
+		  <input type="email" name="email" placeholder = "Votre email"><br>
+		  pseudo : <br>
+		  <input type="text" name="pseudo" placeholder = "Votre pseudo"><br>
+		  Mot de passe:<br>
+		  <input type="password" name="mot_de_passe" placeholder = "Password"><br><br>
+		  Selectionnez un de nos vehicules disponible:<br>
+		  <select name="vehicule">
+
+		  	<% for (var i = 0 ; i < voitures_dispo.length ; i++){ %>
+		  	<option value = <%= voitures_dispo[i].id_car %> > <%= voitures_dispo[i].modele %> </option>
+		  	<% } %>
+
+		  </select>
+		  <input type="submit" value="Inscription">
+		</form>
+
+
+	</body>
+</html>
